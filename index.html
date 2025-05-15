@@ -1,20 +1,42 @@
-<?php
-session_start();
-
-// Jika sudah login, arahkan ke dashboard
-if (isset($_SESSION['user_id'])) {
-    header("Location: pages/dashboard.php");
-    exit;
-}
-?>
-
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Selamat Datang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Aplikasi UTS IMK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 100px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
-<h1>Selamat Datang di Aplikasi UTS IMK</h1>
-<p><a href="pages/login.php">Login</a> | <a href="pages/register.php">Register</a></p>
+
+    <h1>Selamat Datang di Aplikasi UTS IMK</h1>
+    <p>Silakan login atau daftar untuk melanjutkan</p>
+    <div>
+        <a href="pages/login.html">Login</a>
+        <a href="pages/register.html">Register</a>
+    </div>
+
 </body>
 </html>
